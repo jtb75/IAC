@@ -73,4 +73,5 @@ resource "aws_cloudwatch_event_target" "foobar" {
 resource "aws_kinesis_stream" "foo" {
   name        = "${var.stream_name}"
   shard_count = 1
+  encryption_type = "KMS"
 }
